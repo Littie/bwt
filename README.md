@@ -1,2 +1,2 @@
 # bwt
-bwt_test priject
+bwt_test project
