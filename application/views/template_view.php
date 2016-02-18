@@ -16,7 +16,7 @@
             <ul class="nav nav-pills">
                 <li><a href="/">Main</a></li>
                 <li><a href="/login">Sign in</a></li>
-                <li><a href="/wether">Wether</a></li>
+                <li><a href="/weather">Wether</a></li>
                 <li><a href="/feedback">Feedback</a></li>
                 <li><a href="feedback/list">Feedback list</a></li>
             </ul>

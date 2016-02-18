@@ -1,6 +1,6 @@
 <?php
 
-class Controller_wether extends Controller
+class Controller_weather extends Controller
 {
     function action_index()
     {
