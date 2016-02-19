@@ -9,6 +9,8 @@ class Model_Feedback_List extends Model
 
         $connection = Connection::getConnection();
 
+        $connection->query('SET NAMES utf8');
+
         $statement = $connection->query('SELECT * from feedback');
 
         $statement->setFetchMode(PDO::FETCH_ASSOC);
