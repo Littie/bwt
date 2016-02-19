@@ -7,23 +7,13 @@ class Connection
     public $db_name = 'bwt_test';
     public $user = 'admin';
     public $password = '12345';
-    public $connection;
+    private $connection;
 
-    public static $instance;
+    protected static $instance;
 
-    private function _constructor() {
+    private function __construct() {
         try {
             $this->connection = new PDO("mysql:host=$this->host;dbname=$this->db_name", $this->user, $this->password);
-
-/*            $STH = $DBC->query('SELECT * from feedback');
-
-            $STH->setFetchMode(PDO::FETCH_ASSOC);
-
-            while ($row = $STH->fetch()) {
-                echo $row['message'] . ' ';
-                echo $row['time'] . "\n";
-            }*/
-
         } catch (PDOException $ex) {
             echo $ex->getMessage();
         }
@@ -31,11 +21,11 @@ class Connection
 
     static function getConnection()
     {
-        if (!static::$instance) {
-            static::$instance = new Connection();
+        if (self::$instance === null) {
+            self::$instance = new self();
         }
 
-        return static::$instance->connection;
+        return self::$instance->connection;
     }
 
 }

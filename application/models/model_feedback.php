@@ -2,12 +2,15 @@
 
 class Model_feedback extends Model
 {
+
     function getFeedback() {
-        $STH = $DBC->query('SELECT * from feedback');
+        $connection = Connection::getConnection();
 
-        $STH->setFetchMode(PDO::FETCH_ASSOC);
+        $statement = $connection->query('SELECT * from feedback');
 
-        while ($row = $STH->fetch())
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+
+        while ($row = $statement->fetch())
         {
             echo $row['message'] . ' ';
             echo $row['time'] . '\n';
