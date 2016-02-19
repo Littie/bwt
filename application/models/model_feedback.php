@@ -1,5 +1,4 @@
 <?php
-
 $STH = $DBC->query('SELECT * from feedback');
 
 $STH->setFetchMode(PDO::FETCH_ASSOC);
