@@ -1,9 +1,12 @@
 <?php
 
-class Model_feedback extends Model
+class Model_Feedback_List extends Model
 {
 
     function getFeedback() {
+        $set = array();
+        $i = 0;
+
         $connection = Connection::getConnection();
 
         $statement = $connection->query('SELECT * from feedback');
@@ -12,8 +15,11 @@ class Model_feedback extends Model
 
         while ($row = $statement->fetch())
         {
-            echo $row['message'] . ' ';
-            echo $row['time'] . '\n';
+/*            echo $row['message'] . ' ';
+            echo $row['time'] . '\n';*/
+            $set[$i++] = $row;
         }
+
+        return $set;
     }
 }
