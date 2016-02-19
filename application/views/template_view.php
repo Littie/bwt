@@ -18,7 +18,7 @@
                 <li><a href="/login">Sign in</a></li>
                 <li><a href="/weather">Wether</a></li>
                 <li><a href="/feedback">Feedback</a></li>
-                <li><a href="feedback/list">Feedback list</a></li>
+                <li><a href="/feedback_list">Feedback list</a></li>
             </ul>
         </div>
         <div class="col-md-2"></div>
