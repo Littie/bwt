@@ -1,13 +1,12 @@
 <?php
-if ($_REQUEST['send']) {
-    echo 'Message was sent';
-}
-?>
+extract($data);
+
+if ($send !== "feedback_sent") { ?>
 
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-6">
-            <form role="form" action="feedback_view">
+            <form role="form" action="" method="post">
                 <h2>Please send feedback</h2>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
@@ -37,3 +36,10 @@ if ($_REQUEST['send']) {
         </div>
     </div>
 </div>
+
+
+<?php
+} else {
+    echo "Feedback was send";
+}
+?>

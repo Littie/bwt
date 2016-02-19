@@ -1,7 +1,13 @@
+<?php
+extract($data);
+
+if ($login_status === "") {
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-6">
-            <form role="form">
+            <form role="form" action="" method="post">
                 <h2>Please Sign Up</h2>
                 <div class="row">
                     <div class="form-group">
@@ -24,3 +30,10 @@
         </div>
     </div>
 </div>
+
+<?php }
+elseif ($login_status === "access_granted") {
+    echo "Nice to meet you";
+} else {
+    echo "Access denied";
+}
