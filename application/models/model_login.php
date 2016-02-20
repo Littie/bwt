@@ -13,7 +13,6 @@ class Model_Login extends Model
 
         $connection = Connection::getConnection();
 
-//        $statement = $connection->query('SELECT name FROM users WHERE email = ' . $email . ' AND password = ' . $password);
         $statement = $connection->prepare('select name from users where email = ? and password = ?');
         $statement->execute(array($this->email, $this->password));
 
@@ -22,7 +21,7 @@ class Model_Login extends Model
         $row = $statement->fetch();
 
         if ($row) {
-            return true;
+            return $row->name;
         } else {
             return false;
         }

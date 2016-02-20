@@ -33,7 +33,20 @@ if ($login_status === "") {
 
 <?php }
 elseif ($login_status === "access_granted") {
-    echo "Nice to meet you";
-} else {
-    echo "Access denied";
-}
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6">
+            <h3 class="text-center text-success">Nice to meet you, <?= $name?> </h3>
+        </div>
+    </div>
+</div>
+<?php } else { ?>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6">
+        <h3 class="text-center text-danger">Access denied</h3>
+        </div>
+    </div>
+</div>
+<?php }

@@ -17,8 +17,11 @@ class Controller_login extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            if ($this->model->checkAuthenticationData($email, $password)) {
+//            $name = $this->model->checkAuthenticationData($email, $password);
+
+            if (($name = $this->model->checkAuthenticationData($email, $password)) !== false) {
                 $this->data['login_status'] = "access_granted";
+                $this->data['name'] = $name;
             } else {
                 $this->data['login_status'] = "access_denied";
             }
