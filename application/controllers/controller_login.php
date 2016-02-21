@@ -6,6 +6,8 @@ class Controller_login extends Controller
 
     function __construct()
     {
+        session_start();
+
         $this->view = new View();
         $this->model = new Model_Login();
     }
@@ -17,11 +19,10 @@ class Controller_login extends Controller
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-//            $name = $this->model->checkAuthenticationData($email, $password);
-
             if (($name = $this->model->checkAuthenticationData($email, $password)) !== false) {
                 $this->data['login_status'] = "access_granted";
-                $this->data['name'] = $name;
+
+                $_SESSION['user_login'] = $name;
             } else {
                 $this->data['login_status'] = "access_denied";
             }
@@ -30,6 +31,6 @@ class Controller_login extends Controller
             $this->data['login_status'] = "";
         }
 
-        $this->view->generate('login_view.php', 'template_view.php', $this->data);
+            $this->view->generate('login_view.php', 'template_view.php', $this->data);
     }
 }

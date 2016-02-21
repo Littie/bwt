@@ -4,6 +4,8 @@ class Controller_feedback_list extends Controller
 {
     function __construct()
     {
+        session_start();
+
         $this->view = new View();
         $this->model = new Model_Feedback_List();
     }
@@ -11,6 +13,7 @@ class Controller_feedback_list extends Controller
     function action_index()
     {
         $data = $this->model->getFeedback();
+
         $this->view->generate('feedback_list_view.php', 'template_view.php', $data);
     }
 }
