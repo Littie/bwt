@@ -49,7 +49,7 @@ if (isset($_SESSION['user_login'])) {
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <select name="sex" id="sex" class="form-control input-lg">
-                                    <option disabled selected value="">Sex</option>
+                                    <option selected value="">Sex</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
@@ -70,5 +70,17 @@ if (isset($_SESSION['user_login'])) {
             </div>
         </div>
     </div>
+
+<?php }
+if (isset($data['error_message'])) {
+
+?>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-6">
+            <h3 class="text-center text-danger"><?= $data['error_message'] ?> </h3>
+        </div>
+    </div>
+</div>
 
 <?php } ?>

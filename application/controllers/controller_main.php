@@ -14,6 +14,8 @@ class Controller_main extends Controller
 
     function action_index()
     {
+        $data['error_message'] = "";
+
         if (isset($_POST['register'])) {
             $first_name = $_POST['first_name'];
             $last_name = $_POST['last_name'];
@@ -25,9 +27,11 @@ class Controller_main extends Controller
 
             if (($this->model->addUser($first_name, $last_name, $password, $confirm_password, $email, $sex, $birthday)) != false) {
                 $_SESSION['user_login'] = $first_name;
+            } else {
+                $data['error_message'] = "Incorrect input data. Try again";
             }
         }
 
-        $this->view->generate('main_view.php', 'template_view.php');
+        $this->view->generate('main_view.php', 'template_view.php', $data);
     }
 }
