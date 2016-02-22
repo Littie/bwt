@@ -17,8 +17,6 @@ class Model_Feedback_List extends Model
 
         while ($row = $statement->fetch())
         {
-/*            echo $row['message'] . ' ';
-            echo $row['time'] . '\n';*/
             $set[$i++] = $row;
         }
 
