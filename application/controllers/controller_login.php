@@ -23,6 +23,7 @@ class Controller_login extends Controller
                 $this->data['login_status'] = "access_granted";
 
                 $_SESSION['user_login'] = $name;
+                $_SESSION['user_email'] = $email;
             } else {
                 $this->data['login_status'] = "access_denied";
             }

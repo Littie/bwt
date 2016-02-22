@@ -2,9 +2,21 @@
 
 class Model_Feedback extends Model
 {
-    function sendFeedback($name, $email, $message) {
+    private $connection;
 
-        $connection = Connection::getConnection();
+    function __construct()
+    {
+        $this->connection = Connection::getConnection();
 
+    }
+
+    function sendFeedback($name, $message) {
+        $statement = $this->connection->prepare('INSERT INTO feedback (user_id, message, time) SELECT id, ?, ? FROM users WHERE name = ?');
+        $statement->execute(array($message, date("Y-m-d H:i:s"), $name));
+    }
+
+    function insertUser($name, $email) {
+        $statement = $this->connection->prepare('INSERT INTO users (name, email) VALUES (?, ?)');
+        $statement->execute(array($name, $email));
     }
 }

@@ -27,6 +27,7 @@ class Controller_main extends Controller
 
             if (($this->model->addUser($first_name, $last_name, $password, $confirm_password, $email, $sex, $birthday)) != false) {
                 $_SESSION['user_login'] = $first_name;
+                $_SESSION['user_email'] = $email;
             } else {
                 $data['error_message'] = "Incorrect input data. Try again";
             }
