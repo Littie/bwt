@@ -16,7 +16,7 @@ if (isset($_SESSION['user_login'])) {
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h3 class="panel-title">
-                                    Name
+                                    <?= $elements['name'] ?>
                                 </h3>
                             </div>
                             <div class="panel-body">
