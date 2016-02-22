@@ -17,12 +17,21 @@ if (isset($_SESSION['user_login'])) {
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2 col-md-2"></div>
-                            <div class="col-xs-8 col-md-8">
-                                <input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
+                            <div class="col-xs-2 col-md-2"><img src="/util/capcha.php"></div>
+                            <div class="col-xs-8 col-md-4"><input type="test" name="capcha" id="capcha" class="form-control input-lg"
+                                                                  placeholder="Enter capcha"></div>
+                            <div class="col-xs-2 col-md-6"><input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
                             </div>
-                            <div class="col-xs-2 col-md-2"></div>
                         </div>
+                        <?php if ($data['capcha'] === 'wrong_capcha') { ?>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 col-md-6">
+                                        <h3 class="text-center text-danger">Wrong capcha</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </form>
                 </div>
             </div>
@@ -61,17 +70,25 @@ if (isset($_SESSION['user_login'])) {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-2 col-md-2"></div>
-                        <div class="col-xs-8 col-md-8">
-                            <input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
+                        <div class="col-xs-2 col-md-2"><img src="/util/capcha.php"></div>
+                        <div class="col-xs-8 col-md-4"><input type="test" name="capcha" id="capcha" class="form-control input-lg"
+                                                              placeholder="Enter capcha"></div>
+                        <div class="col-xs-2 col-md-6"><input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
                         </div>
-                        <div class="col-xs-2 col-md-2"></div>
                     </div>
+                    <?php if ($data['capcha'] === 'wrong_capcha') { ?>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8 col-md-6">
+                                    <h3 class="text-center text-danger">Wrong capcha</h3>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </form>
             </div>
         </div>
     </div>
-
 
     <?php
 } else {
