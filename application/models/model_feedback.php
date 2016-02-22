@@ -16,7 +16,7 @@ class Model_Feedback extends Model
     }
 
     function insertUser($name, $email) {
-        $statement = $this->connection->prepare('INSERT INTO users (name, email) VALUES (?, ?)');
-        $statement->execute(array($name, $email));
+        $statement = $this->connection->prepare('INSERT INTO users (name, password, email) VALUES (?, ?, ?)');
+        $statement->execute(array($name, md5('guest'), $email));    // Заглушка
     }
 }

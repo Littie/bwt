@@ -11,7 +11,7 @@ class Model_Feedback_List extends Model
 
         $connection->query('SET NAMES utf8');
 
-        $statement = $connection->query('SELECT * from feedback');
+        $statement = $connection->query('SELECT users.name, feedback.message, feedback.time from users, feedback WHERE users.id = feedback.user_id');
 
         $statement->setFetchMode(PDO::FETCH_ASSOC);
 

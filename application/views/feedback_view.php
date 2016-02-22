@@ -19,7 +19,7 @@ if (isset($_SESSION['user_login'])) {
                         <div class="row">
                             <div class="col-xs-2 col-md-2"></div>
                             <div class="col-xs-8 col-md-8">
-                                <input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg" tabindex="6">
+                                <input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
                             </div>
                             <div class="col-xs-2 col-md-2"></div>
                         </div>
@@ -51,7 +51,7 @@ if (isset($_SESSION['user_login'])) {
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="3">
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -63,7 +63,7 @@ if (isset($_SESSION['user_login'])) {
                     <div class="row">
                         <div class="col-xs-2 col-md-2"></div>
                         <div class="col-xs-8 col-md-8">
-                            <input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg" tabindex="6">
+                            <input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
                         </div>
                         <div class="col-xs-2 col-md-2"></div>
                     </div>
@@ -79,7 +79,7 @@ if (isset($_SESSION['user_login'])) {
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-md-6">
-                <h3 class="text-center text-success">Message was sent> </h3>
+                <h3 class="text-center text-success">Message was sent</h3>
             </div>
         </div>
     </div>
