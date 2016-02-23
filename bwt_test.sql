@@ -27,10 +27,7 @@ CREATE TABLE `feedback` (
   `user_id` int(11) unsigned NOT NULL,
   `message` text,
   `time` datetime NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `user_id_fk_idx` (`user_id`),
-  CONSTRAINT `user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
-  CONSTRAINT `user_id_fk1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -52,7 +49,7 @@ DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `users` (
-  `id` int(11) unsigned NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `surename` varchar(45) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -61,7 +58,7 @@ CREATE TABLE `users` (
   `birthday` date DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +67,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Ivan','Ivanov','827ccb0eea8a706c4c34a16891f84e7b','ivanov@gmail.com','male','1986-12-12'),(2,'Vasja','Vasiliev','e10adc3949ba59abbe56e057f20f883e','vasiliev@gmail.com','male','1995-03-15'),(3,'Artem','Polik','810159a253f77b53f94f4a4ec3517d69','artem@gmail.com','','0000-00-00'),(4,'Vovan','Vovanchik','e10adc3949ba59abbe56e057f20f883e','vovan@gmail.com','male','1999-11-23'),(5,'Baton','','','baton@gmail.com',NULL,NULL),(6,'Lisij','','084e0343a0486ff05530df6c705c8bb4','lisij@gmail.com',NULL,NULL),(7,'Kop','','084e0343a0486ff05530df6c705c8bb4','kop@gmail.com',NULL,NULL);
+INSERT INTO `users` VALUES (1,'Ivan','Ivanov','827ccb0eea8a706c4c34a16891f84e7b','ivanov@gmail.com','male','1986-12-12'),(2,'Vasja','Vasiliev','e10adc3949ba59abbe56e057f20f883e','vasiliev@gmail.com','male','1995-03-15'),(3,'Artem','Polik','810159a253f77b53f94f4a4ec3517d69','artem@gmail.com','','0000-00-00'),(4,'Vovan','Vovanchik','e10adc3949ba59abbe56e057f20f883e','vovan@gmail.com','male','1999-11-23'),(5,'Baton','','','baton@gmail.com',NULL,NULL),(6,'Lisij','','084e0343a0486ff05530df6c705c8bb4','lisij@gmail.com',NULL,NULL),(7,'Kop','','084e0343a0486ff05530df6c705c8bb4','kop@gmail.com',NULL,NULL),(10,'Bolt','Boltovich','d41d8cd98f00b204e9800998ecf8427e','bolt@gmail.com','','0000-00-00');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -83,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-02-23  4:24:44
+-- Dump completed on 2016-02-23 14:58:16

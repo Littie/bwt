@@ -35,13 +35,13 @@ if (isset($_SESSION['user_login'])) {
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password"
-                                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$ " required>
+                                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                             </div>
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6">
                             <div class="form-group">
                                 <input type="password" name="confirm_password" id="confirm_password" class="form-control input-lg"
-                                       placeholder="Confirm password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$ " required>
+                                       placeholder="Confirm password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required>
                             </div>
                         </div>
                     </div>
