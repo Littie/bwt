@@ -64,7 +64,7 @@ if (isset($_SESSION['user_login'])) {
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Name" pattern="[a-zA-Z]{1,20}" required>
                             </div>
                         </div>
                     </div>
