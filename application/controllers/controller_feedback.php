@@ -15,17 +15,22 @@ class Controller_feedback extends Controller
     {
         if (isset($_POST['send'])) {
             if ($_POST['capcha'] === $_SESSION['code']) {
-                if (isset($_SESSION['user_login']) && isset($_SESSION['user_email'])) {
-                    $this->model->sendFeedback($_SESSION['user_login'], $_POST['message']);
-                } else {
-                    $this->model->insertUser($_POST['first_name'], $_POST['email']);
-                    $this->model->sendFeedback($_POST['first_name'], $_POST['message']);
-                }
+                if ($_POST['message'] !== '') {
+                    $data['send'] = 'feedback_sent';
 
-                $data['send'] = 'feedback_sent';
+                    if (isset($_SESSION['user_login']) && isset($_SESSION['user_email'])) {
+                        $this->model->sendFeedback($_SESSION['user_login'], $_POST['message']);
+                    } elseif ($_POST['first_name'] !== '' && $_POST['email'] !== '') {
+                        $this->model->insertUser($_POST['first_name'], $_POST['email']);
+                        $this->model->sendFeedback($_POST['first_name'], $_POST['message']);
+                    }
+                } else {
+                    $data['send'] = 'All fields are required';
+//                    $data['capcha'] = '';
+                }
             } else {
                 $data['send'] = '';
-                $data['capcha'] = "wrong_capcha";
+                $data['capcha'] = "wrong capcha";
             }
         } else {
             $data['send'] = '';

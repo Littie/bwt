@@ -12,7 +12,7 @@ if (isset($_SESSION['user_login'])) {
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea name="message" id="message" class="form-control input-lg" placeholder="Message" rows="8"></textarea>
+                                    <textarea name="message" id="message" class="form-control input-lg" placeholder="Message" rows="8" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -23,11 +23,20 @@ if (isset($_SESSION['user_login'])) {
                             <div class="col-xs-2 col-md-6"><input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
                             </div>
                         </div>
-                        <?php if ($data['capcha'] === 'wrong_capcha') { ?>
+                        <?php if ($data['capcha'] === 'wrong capcha') { ?>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-xs-12 col-sm-8 col-md-6">
-                                        <h3 class="text-center text-danger">Wrong capcha</h3>
+                                        <h3 class="text-center text-danger"><?= $data['capcha']?></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <?php if ($data['send'] === 'All fields are required') { ?>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 col-md-6">
+                                        <h3 class="text-center text-danger"><?= $data['send']?></h3>
                                     </div>
                                 </div>
                             </div>
@@ -55,17 +64,17 @@ if (isset($_SESSION['user_login'])) {
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Name">
+                                <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" required>
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <textarea name="message" id="message" class="form-control input-lg" placeholder="Message" rows="8"></textarea>
+                                <textarea name="message" id="message" class="form-control input-lg" placeholder="Message" rows="8" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -76,11 +85,20 @@ if (isset($_SESSION['user_login'])) {
                         <div class="col-xs-2 col-md-6"><input type="submit" value="Send" name="send" class="btn btn-primary btn-block btn-lg">
                         </div>
                     </div>
-                    <?php if ($data['capcha'] === 'wrong_capcha') { ?>
+                    <?php if ($data['capcha'] === 'wrong capcha') { ?>
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-8 col-md-6">
-                                    <h3 class="text-center text-danger">Wrong capcha</h3>
+                                    <h3 class="text-center text-danger"><?= $data['capcha']?></h3>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+                    <?php if ($data['send'] === 'All fields are required') { ?>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-8 col-md-6">
+                                    <h3 class="text-center text-danger"><?= $data['send']?></h3>
                                 </div>
                             </div>
                         </div>
