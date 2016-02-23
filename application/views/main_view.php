@@ -46,7 +46,8 @@ if (isset($_SESSION['user_login'])) {
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" required>
+                        <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address"
+                               pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$" required>
                     </div>
                     <div class="row">
                         <div class="col-xs-6 col-sm-6 col-md-6">
