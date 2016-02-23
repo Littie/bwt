@@ -3,11 +3,12 @@
 
 class Model_Main extends Model
 {
-    private $connection;
+    private $dbConnection;
 
     function __construct()
     {
-        $this->connection = Connection::getConnection();
+        global $connection;
+        $this->dbConnection = $connection;
     }
 
     function addUser($first_name, $last_name, $password, $confirm_password, $email, $sex = "", $birthday = "") {
@@ -16,7 +17,7 @@ class Model_Main extends Model
 
         if ($password === $confirm_password && $first_name !== '' && $last_name !== '' && $email !== '') {
             $data = array($first_name, $last_name, md5($password), $email, $sex, $birthday);
-            $statement = $this->connection->prepare('INSERT INTO users (name, surename, password, email, sex, birthday) VALUES (?, ?, ?, ?, ?, ?)');
+            $statement = $this->dbConnection->prepare('INSERT INTO users (name, surename, password, email, sex, birthday) VALUES (?, ?, ?, ?, ?, ?)');
             $statement->execute($data);
 
             return true;
