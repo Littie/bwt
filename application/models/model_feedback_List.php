@@ -23,6 +23,15 @@ class Model_Feedback_List extends Model
             $set[$i++] = $row;
         }
 
+        $statement = $this->dbConnection->query('select guest_users.name, feedback.message, feedback.time from guest_users, feedback where guest_users.id = feedback.guest_id');
+
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+
+        while ($row = $statement->fetch())
+        {
+            $set[$i++] = $row;
+        }
+
         return $set;
     }
 }
