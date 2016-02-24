@@ -21,8 +21,9 @@ class Controller_feedback extends Controller
                     if (isset($_SESSION['user_login']) && isset($_SESSION['user_email'])) {
                         $this->model->sendFeedback($_SESSION['user_login'], $_POST['message']);
                     } elseif ($_POST['first_name'] !== '' && $_POST['email'] !== '') {
-                        $this->model->insertUser($_POST['first_name'], $_POST['email']);
-                        $this->model->sendFeedback($_POST['first_name'], $_POST['message']);
+//                        $this->model->insertUser($_POST['first_name'], $_POST['email']);
+//                        $this->model->sendFeedback($_POST['first_name'], $_POST['message']);
+                        $this->model->sendGuestFeedback($_POST['first_name'], $_POST['email'], $_POST['message']);
                     }
                 } else {
                     $data['send'] = 'All fields are required';

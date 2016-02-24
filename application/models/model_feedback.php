@@ -15,8 +15,8 @@ class Model_Feedback extends Model
         $statement->execute(array($message, date("Y-m-d H:i:s"), $name));
     }
 
-    function insertUser($name, $email) {
-        $statement = $this->dbConnection->prepare('INSERT INTO users (name, password, email) VALUES (?, ?, ?)');
-        $statement->execute(array($name, md5('guest'), $email));    // Заглушка
+    function sendGuestFeedback($name, $email, $message) {
+        $statement = $this->dbConnection->prepare('INSERT INTO guest_users (name, email, message) VALUES (?, ?, ?)');
+        $statement->execute(array($name, $email, $message));
     }
 }
