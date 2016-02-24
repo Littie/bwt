@@ -14,7 +14,7 @@ class Model_Feedback_List extends Model
 
         $this->dbConnection->query('SET NAMES utf8');
 
-        $statement = $this->dbConnection->query('SELECT users.name, feedback.message, feedback.time from users, feedback WHERE users.id = feedback.user_id');
+        $statement = $this->dbConnection->query('SELECT users.name, feedback.message, feedback.time from users, feedback WHERE users.id = feedback.user_id ORDER BY time');
 
         $statement->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -22,8 +22,8 @@ class Model_Feedback_List extends Model
         {
             $set[$i++] = $row;
         }
-
-        $statement = $this->dbConnection->query('select guest_users.name, feedback.message, feedback.time from guest_users, feedback where guest_users.id = feedback.guest_id');
+        //k;lfjalkjasf;alksj
+        $statement = $this->dbConnection->query('select guest_users.name, feedback.message, feedback.time from guest_users, feedback where guest_users.id = feedback.guest_id ORDER BY time');
 
         $statement->setFetchMode(PDO::FETCH_ASSOC);
 
