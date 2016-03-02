@@ -21,6 +21,9 @@ i.ic-loop {
     background-position: -14px 0;
 }
 
+/* Head style start */
+
+/* h-info start */
 .h-info {
     height: 30px;
     padding: 7px 0;
@@ -46,7 +49,7 @@ i.ic-loop {
 }
 
 .h-info-care {
-    margin-left: 83px;
+    margin-left: 100px;
 }
 
 .h-info-phone {
@@ -62,3 +65,31 @@ i.ic-loop {
         float: right;
     }
 }
+/* h-info end */
+.h-nav {
+    height: 105px;
+    padding: 20px 85px 20px 100px;
+
+}
+
+.logo {
+    background-color: #fff;
+    padding-top: 22px;
+}
+
+.menu {
+    margin-top: 15px;
+    margin-left: 25px;
+}
+
+.menu a {
+    color: #000000;
+    font-size: 16px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    background-color: inherit;
+    text-decoration: none;
+}
+/* h-nav start */
