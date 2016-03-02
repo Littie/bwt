@@ -1,0 +1,54 @@
+body {
+    margin: 1px 0;
+}
+
+i[class*="ic-"] {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    background: url(../images/sprite.png) no-repeat;
+}
+
+i.ic-user {
+    width: 14px;
+    height: 14px;
+    background-position: 0 0;
+}
+
+i.ic-loop {
+    width: 15px;
+    height: 14px;
+    background-position: -14px 0;
+}
+
+.h-info {
+    height: 30px;
+    padding: 7px 0;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.user a:first-child {
+    margin-left: 32px;
+    border-left: 1px solid #444444;
+}
+
+.h-info a {
+    float: left;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    border-right: 1px solid #444444;
+    color: #ffffff;
+}
+
+.h-info-care {
+    margin-left: 83px;
+}
+
+.h-info-phone {
+    font-size: 12px;
+}
