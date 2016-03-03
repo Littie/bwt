@@ -30,7 +30,7 @@
             <div class="row h-info">
                 <div class="col-xs-6 col-sm-6 col-md-8">
                     <span class="h-info-care">custom care:</span>
-                    <span class="h-info-phone">888-23-4567</span>
+                    <span>888-23-4567</span>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4">
                     <div class="user">
@@ -48,46 +48,85 @@
 
             <!-- h-nav start -->
             <div class="row h-nav">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="logo">
                         <a href="#"><img src="images/logo.png"></a>
                     </div>
                 </div>
-                <div class="col-md-7 menu">
-                    <ul class="nav nav-pills">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">new<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">SUBMENU</a></li>
+                <div class="col-md-8">
+                    <nav role="navigation" class="navbar navbar-default navbar-static-top menu">
+                        <div class="navbar-header">
+                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">new<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Submenu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">designers<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Submenu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">women<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Submenu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">men<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Submenu</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">clearence<span
+                                            class="caret"></span></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Submenu</a></li>
+                                    </ul>
+                                </li>
                             </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">designers<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">SUBMENU</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">women<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">SUBMENU</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">man<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">SUBMENU</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown dropdown-toggle" data-toggle="dropdown">clearence<b class="caret"></b></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">SUBMENU</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </nav>
+                    <table class="table table-bordered cart">
+                        <tbody>
+                        <tr>
+                            <td class="cart-list">
+                                <div class="collapse navbar-collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Your
+                                                cart<span class="caret cart-list-caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Submenu</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="cart-info">
+                            <td>ITEMS</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--</div>-->
                 </div>
-                <div class="col-md-2 cart"></div>
+
             </div>
 
             <!-- h-nav end -->
@@ -104,5 +143,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
