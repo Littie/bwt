@@ -1,7 +1,21 @@
-body {
-    margin: 1px 0;
+/* Common settings*/
+
+[class*="col-"] {
+    /*outline: 1px solid #ff0000;*/
+    padding: 0;
+    margin: 0;
 }
 
+.container {
+    padding-left: 115px;
+    padding-right: 115px;
+}
+
+body {
+    margin-top: 1px;
+}
+
+/* Sprite icons */
 i[class*="ic-"] {
     display: inline-block;
     vertical-align: middle;
@@ -27,80 +41,89 @@ i.ic-cart {
     background-position: -22px 0;
 }
 
-/* Head style start */
+/* Header h-top */
 
-/* h-info start */
-.h-info {
-    height: 30px;
-    padding: 7px 0;
+.h-top {
     font-family: Arial, sans-serif;
     font-size: 12px;
-    text-transform: uppercase;
     background-color: #000000;
-    color: #ffffff;
 }
 
-.user a:first-child {
-    margin-left: 32px;
-    border-left: 1px solid #444444;
-}
-
-.h-info a {
-    float: left;
-    padding-right: 15px;
-    padding-left: 15px;
-    text-decoration: none;
-    border-right: 1px solid #444444;
+.h-info {
+    text-transform: uppercase;
     color: #ffffff;
 }
 
 .h-info-care {
-    margin-left: 100px;
+    padding: 7px 0;
 }
 
-@media screen and (max-width: 768px) {
-    .h-info-care {
-        margin-left: 0;
-    }
+.account {
+    float: right;
+    margin: 7px auto;
 
-    .user {
-        float: right;
-    }
 }
-/* h-info end */
+
+.account a {
+    padding: 0 15px 0 15px;
+    color: #ffffff;
+}
+
+.lang-list {
+    float: left;
+    height: 100%;
+    border-left: 1px solid #444444;
+    border-right: 1px solid #444444;
+}
+
+.user {
+    float: left;
+    border-right: 1px solid #444444;
+}
+
+.search {
+    float: left;
+    border-right: 1px solid #444444;
+}
+
+.account .lang-list .navbar-collapse > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.account .lang-list .navbar-collapse > ul > a {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header h-bottom */
+
+.h-bottom {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+.nav {
+    font-size: 16px;
+}
+
+.nav .navbar {
+    float: right;
+    margin: 32px 30px 15px 0;
+    border: 0;
+    background-color: #ffffff;
+}
 
 .logo {
-    /*outline: 1px solid #4cae4c ;*/
     float: left;
-    background-color: #fff;
-    padding: 42px 85px 42px 100px;
-}
-
-.menu {
-    float: left;
-    padding: 33px 0 0;
-}
-
-.navbar-default {
-    margin-bottom: 0;
-    font-size: 16px;
-    background-color: #fff;
-    border-color: #fff;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #000;
-}
-
-.navbar-default .navbar-nav > li:first-child > a {
-    padding-left: 5px;
+    margin: 42px auto;
 }
 
 .cart {
-    float: left;
-    width: 215px;
-    margin-left: 12px;
     max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding-left: 15px;
     font-family: Arial sans-serif;
     font-size: 12px;
     color: #b1b0b0;
@@ -131,6 +154,11 @@ i.ic-cart {
     background-color: #fafafa;
 }
 
+.table .cart-info a {
+    text-transform: uppercase;
+    color: #cacaca;
+}
+
 
 .cart-list > .navbar-collapse > ul {
     width: 100%;
@@ -149,4 +177,82 @@ i.ic-cart {
     float: right;
 }
 
-/* h-nav start */
+.item{
+    background: #333;
+    text-align: center;
+    height: 300px !important;
+
+}
+
+/* Header carousel */
+
+
+.h-carousel {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.item {
+    background: #f6f3ec;
+    text-align: center;
+    height: 440px !important;
+
+}
+
+.first {
+    background-image: url("../images/top-carousel-bg.jpg");
+}
+
+.carousel-indicators {
+    bottom: -57px;
+}
+
+.carousel-indicators li {
+    margin: auto 7px;
+    background-color: #867a76;
+    border: 0px;
+}
+
+.carousel-indicators .active {
+    margin: -1px 7px;
+    background-color: #fd926d;
+}
+
+.carousel-slogan {
+    float: left;
+    margin-left: 183px;
+    margin-top: 42px;
+}
+
+.carousel-slogan .btn {
+    display: block;
+    width: 156px;
+    height: 55px;
+    margin-left: 95px;
+    margin-top: 18px;
+    border-radius: 0px;
+    background: #fd926d url("../images/carousel-btn-line.png") repeat-x bottom;
+    border: 0px;
+    font-size: 16px;
+    font-family: Helvetica Neue LT Std;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.carousel-slogan .btn img {
+    margin-left: 15px;
+}
+
+.carousel-control.left {
+    background: url("../images/carousel-prev.png") no-repeat left center;
+}
+
+.carousel-control.right {
+    background: url("../images/carousel-next.png") no-repeat right center;
+}
+
+.carousel-radio {
+    height: 75px;
+}
+
