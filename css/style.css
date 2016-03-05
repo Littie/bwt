@@ -256,3 +256,32 @@ i.ic-cart {
     height: 75px;
 }
 
+/* Social */
+
+.social {
+    background-color: #ededed
+}
+
+.social .btn {
+    background-image: url("../images/email-btn.png");
+    padding: 13px;
+}
+
+.social .input-group .form-control {
+    height: 28px;
+    width: 130px;
+    margin: 14px auto;
+    border: 0;
+    border-radius: 0;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    font-style: italic;
+    color: #b9b9b9;
+}
+
+.social label {
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    color: #747474;
+}
