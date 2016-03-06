@@ -285,3 +285,62 @@ i.ic-cart {
     font-family: Arial sans-serif;
     color: #747474;
 }
+
+.social label {
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    color: #747474;
+}
+
+.social .social-find {
+    margin-right: 6px;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    color: #6b6b6b;
+}
+
+/* Brand */
+
+.container.brand {
+    padding-left: 114px;
+    padding-right: 114px;
+}
+
+.brand {
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+
+.brand .right .top {
+    margin-left: 2px;
+    max-width: 100%;
+}
+
+.brand .right .bottom {
+    margin-left: 2px;
+    margin-top: 2px;
+    max-width: 100%;
+}
+
+.brand button.shop {
+    position: absolute;
+    left: 30px;
+    bottom: 18px;
+}
+
+.brand .btn-default {
+    border-radius: 0px;
+    border: 0px;
+    background-color: #4fafa0;
+    font-size: 12px;
+    font-family: Helvetica Neue LT Std;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.brand .btn img {
+    margin-left: 8px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+}
