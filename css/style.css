@@ -188,33 +188,34 @@ i.ic-cart {
 
 
 .h-carousel {
-    position: relative;
     padding-left: 15px;
     padding-right: 15px;
 }
 
-.item {
+.h-carousel .item {
     background: #f6f3ec;
     text-align: center;
     height: 440px !important;
 
 }
 
-.first {
+.h-carousel .first {
     background-image: url("../images/top-carousel-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.carousel-indicators {
+.h-carousel .carousel-indicators {
     bottom: -57px;
 }
 
-.carousel-indicators li {
+.h-carousel .carousel-indicators li {
     margin: auto 7px;
     background-color: #867a76;
-    border: 0;
+    border: 0px;
 }
 
-.carousel-indicators .active {
+.h-carousel .carousel-indicators .active {
     margin: -1px 7px;
     background-color: #fd926d;
 }
@@ -231,9 +232,9 @@ i.ic-cart {
     height: 55px;
     margin-left: 95px;
     margin-top: 18px;
-    border-radius: 0;
+    border-radius: 0px;
     background: #fd926d url("../images/carousel-btn-line.png") repeat-x bottom;
-    border: 0;
+    border: 0px;
     font-size: 16px;
     font-family: Helvetica Neue LT Std;
     text-transform: uppercase;
@@ -244,15 +245,15 @@ i.ic-cart {
     margin-left: 15px;
 }
 
-.carousel-control.left {
+.h-carousel .carousel-control.left {
     background: url("../images/carousel-prev.png") no-repeat left center;
 }
 
-.carousel-control.right {
+.h-carousel .carousel-control.right {
     background: url("../images/carousel-next.png") no-repeat right center;
 }
 
-.carousel-radio {
+.h-carousel .carousel-radio {
     height: 75px;
 }
 
@@ -492,4 +493,78 @@ i.ic-cart {
 
 .b-carousel .carousel-control.left:hover {
     background: url("../images/b-carousel-prev-act.png") no-repeat right center;
+}
+
+/* Clearance */
+
+.container.clearance {
+    margin-top: 23px;
+}
+
+.container.clearance .col-md-3 {
+    padding: 12px;
+}
+
+hr.left {
+    margin-top: 80px;
+    margin-right: 15px;
+    width: 40%;
+    float: left;
+}
+
+hr.right {
+    margin-top: 80px;
+    width: 40%;
+    float: right;
+}
+
+.clearance .items {
+    margin-top: 25px;
+
+}
+
+.clearance img {
+    max-width: 100%;
+}
+
+.clearance .description {
+    background-color: #f7f7f7;
+    font-family: Arial sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #373737;
+}
+
+.clearance .description span.title {
+    display: block;
+    margin-top: 11px;
+    font-size: 12px;
+}
+
+.clearance .description span.size {
+    display: block;
+    font-size: 22px;
+}
+
+.clearance .btn {
+    margin-bottom: 11px;
+    border: 0;
+    border-radius: 0px;
+    background: #fd926d url("../images/carousel-btn-line.png") repeat-x bottom;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+.clearance .btn img {
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.clearance img.sale {
+    position: absolute;
+    top: 12px;
+    left: 12px;
 }
