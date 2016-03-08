@@ -211,7 +211,7 @@ i.ic-cart {
 .carousel-indicators li {
     margin: auto 7px;
     background-color: #867a76;
-    border: 0px;
+    border: 0;
 }
 
 .carousel-indicators .active {
@@ -231,9 +231,9 @@ i.ic-cart {
     height: 55px;
     margin-left: 95px;
     margin-top: 18px;
-    border-radius: 0px;
+    border-radius: 0;
     background: #fd926d url("../images/carousel-btn-line.png") repeat-x bottom;
-    border: 0px;
+    border: 0;
     font-size: 16px;
     font-family: Helvetica Neue LT Std;
     text-transform: uppercase;
@@ -330,8 +330,8 @@ i.ic-cart {
 }
 
 .brand .btn-default {
-    border-radius: 0px;
-    border: 0px;
+    border-radius: 0;
+    border: 0;
     background-color: #4fafa0;
     font-size: 12px;
     font-family: Helvetica Neue LT Std;
@@ -343,4 +343,153 @@ i.ic-cart {
     margin-left: 8px;
     margin-bottom: 3px;
     vertical-align: middle;
+}
+
+/* b-carousel */
+
+.container.b-carousel {
+    margin-top: 50px;
+}
+
+.content {
+    background-color: #fd926d;
+}
+
+.b-carousel .b-nav {
+    padding: 0;
+    border-bottom: 0;
+    background-color: #fff;
+}
+
+.b-carousel .nav-tabs {
+    border: 0;
+}
+
+.b-carousel .nav-tabs > li.active > a {
+    background-color: #fd926d;
+    font-size: 15px;
+    font-family: Arial sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.b-carousel .nav-tabs > li > a {
+    border: 0px;
+    border-radius: 0;
+    margin-right: 2px;
+    font-size: 15px;
+    font-family: Arial sans-serif;
+    text-transform: uppercase;
+    color: #8e8e8e;
+}
+
+.b-carousel .nav-tabs > li > a:hover,
+.b-carousel .nav-tabs > li > a:focus {
+    border: 0;
+    color: #ffffff;
+    background-color: #fd926d;
+}
+
+.content .row {
+    margin-top: 29px;
+}
+
+.content .col-md-3,
+.content  .col-md-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fd926d;
+}
+
+.content .row img {
+    max-width: 100%;
+}
+
+.content .item a:hover .description {
+    width: 103%;
+}
+
+.content .item a:hover img {
+    max-width: 103%;
+}
+
+
+.content .row img.sale {
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.content .description {
+    margin-bottom: 30px;
+    background-color: #f7f7f7;
+    font-family: Arial sans-serif;
+    color: #373737;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content .title {
+    display: block;
+    padding-top: 12px;
+    font-size: 12px;
+}
+
+.content .price {
+    display: block;
+    font-size: 22px;
+}
+
+.content .btn {
+    margin-bottom: 11px;
+    border-radius: 0px;
+    background: #fd926d url("../images/carousel-btn-line.png") repeat-x bottom;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+.content .btn img {
+    margin-left: 5px;
+    margin-bottom: 3px;
+}
+
+.carousel-inner .active.left {
+    left: -25%;
+}
+
+.carousel-inner .next {
+    left:  25%;
+}
+
+.carousel-inner .active.right {
+    left: 25%;
+}
+
+.carousel-inner .prev {
+    left:  -25%;
+}
+
+.b-carousel .carousel-control {
+    width: 47px;
+}
+
+.b-carousel .carousel-control.left {
+    right: 47px;
+    left: auto;
+    background: url("../images/b-carousel-prev.png") no-repeat left center;
+}
+
+.b-carousel .carousel-control.right {
+    background: url("../images/b-carousel-next.png") no-repeat right center;
+}
+
+.b-carousel .carousel-control.right:hover {
+    background: url("../images/b-carousel-next-act.png") no-repeat right center;
+}
+
+.b-carousel .carousel-control.left:hover {
+    background: url("../images/b-carousel-prev-act.png") no-repeat right center;
 }
