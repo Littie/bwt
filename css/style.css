@@ -639,3 +639,136 @@ hr.right {
     text-align: center;
     color: #999999;
 }
+
+/* Accept */
+
+.container.accept {
+    margin-top: 25px;
+    background-color: #f7f7f7;
+}
+
+.container.accept .col-md-12 {
+    margin: 19px 0 17px 22%;
+}
+
+.container.accept a {
+    float: left;
+    margin-right: 10px;
+}
+
+.container.accept span {
+    float: left;
+    margin-top: 3px;
+    margin-right: 15px;
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    color: #414141;
+}
+
+/* f-menu */
+
+.container.f-menu {
+    background-color: #ededed;
+}
+
+.f-menu ul {
+    padding: 0;
+}
+
+.f-menu li {
+    list-style: none;
+}
+
+.f-menu a {
+    font-size: 12px;
+    font-family: Arial sans-serif;
+    color: #544f4d;
+    text-decoration: none;
+}
+
+.f-menu span {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 18px;
+    font-family: Arial sans-serif;
+    color: #3b3634;
+}
+
+.f-menu .service {
+    padding-left: 0;
+}
+
+.f-menu .information {
+    padding-left: 30px;
+}
+
+.f-menu .campaigns {
+    padding-left: 35px;
+}
+
+.f-menu .stores {
+    padding-left: 45px;
+}
+
+.f-menu .social {
+    padding-left: 25px;
+}
+
+.f-menu .social a {
+    float: left;
+    margin: 9px 9px 0 0px;
+}
+
+.f-menu .secured {
+    float: right;
+}
+
+.f-menu .secured img {
+    float: right;
+    margin-top: 40px;
+    margin-left: 35px;
+}
+
+/* f-bottom */
+
+.container.f-bottom {
+    background-color: #000;
+    color: #ffffff;
+}
+
+.f-bottom a {
+    float: left;
+    padding-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-family: Arial sans-serif;
+    color: #8d8d8d;
+}
+
+.f-bottom a:after {
+    padding-left: 10px;
+    content: "|";
+}
+
+.f-bottom a:last-child:after {
+    content: "";
+}
+
+.f-bottom .all-right {
+    float: right;
+    margin-top: 25px;
+    font-size: 11px;
+    font-family: Arial sans-serif;
+    color: #8d8d8d;
+}
+
+.at {
+    float: right;
+}
+
+.all-right .right {
+    clear: both;
+    float: right;
+}
