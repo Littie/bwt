@@ -612,12 +612,12 @@ hr.right {
     margin-bottom: 0;
 }
 
-.container.favourite img {
+.container.favourite a {
     float: left;
     margin-right: 46px;
 }
 
-.container.favourite img:last-child {
+.container.favourite a:last-child {
     margin-right: 0;
 }
 
