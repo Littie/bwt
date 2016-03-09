@@ -421,6 +421,18 @@ i.ic-cart {
     left: 15px;
 }
 
+.content .row img.shop {
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    visibility: hidden;
+}
+
+.content .row a:hover img.shop {
+    position: absolute;
+    visibility: visible;
+}
+
 .content .description {
     margin-bottom: 30px;
     background-color: #f7f7f7;
